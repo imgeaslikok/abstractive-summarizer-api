@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  summarization_api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: summarization_service
+
+    ports:
+      - "8000:8000"
+
+    environment:
+      PORT: 8000
+
+    deploy:
+      resources:
+        limits:
+          memory: 12g 
+
+        reservations:
+          cpus: '2'
