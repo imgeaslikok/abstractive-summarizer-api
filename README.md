@@ -57,8 +57,8 @@ Used to summarize a long text.
 ```json
 {
   "text": "The long text goes here...",
-  "min_length": 30,  // Minimum summary length
-  "max_length": 150  // Maximum summary length
+  "min_length": 30,
+  "max_length": 150
 }
 ```
 - **Successful Response**:
