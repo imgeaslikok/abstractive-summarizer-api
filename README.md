@@ -1,13 +1,13 @@
-# 🚀 LLM Summarization API (FastAPI + BART-Large)
+# LLM Summarization API (FastAPI + BART-Large)
 This repository provides a functional microservice for **Abstractive Text Summarization**. It is developed for consistent performance and uses a **BART-Large** LLM integrated with **FastAPI**, **Docker**, and **Gunicorn** for deployment.
 
-### 🛠️ Setup and Running
+### Setup and Running
 The project is designed to be run using Docker-Compose.
 
 #### 1. Prerequisites
 - Docker
 - Docker Compose
-- Sufficient RAM (A minimum of **12 GB RAM** is recommended for the Docker Engine/VM to safely load the model.) 🐏
+- Sufficient RAM (A minimum of **12 GB RAM** is recommended for the Docker Engine/VM to safely load the model.)
 
 #### 2. Clone the Repository
 ```bash
@@ -18,7 +18,7 @@ cd abstractive-summarizer-api
 #### 3. Build and Start the Service
 The following command builds the Docker image, caches the model weights inside the image, and starts the API service.
 
-⚠️ Note: The initial build process may take some time due to the large size of the model. Grab a ☕!
+**Note**: The initial build process may take some time due to the large size of the model. Grab a ☕!
 ```bash
 make run
 ```
@@ -29,8 +29,8 @@ Ensure the container is running:
 make logs
 ```
 
-### 🌐 API Usage
-The API is available on port 8000 of your local machine. 🌍
+### API Usage
+The API is available on port 8000 of your local machine.
 
 #### A. Liveness Check (Service Running)
 Checks if the service is alive. ✅
@@ -49,7 +49,7 @@ Checks the precise loading status of the AI model. This is the official readines
 - **Successful Response**: Returns `{"model_status": "Loaded"}` once the model is in memory.
 
 #### C. Text Summarization (Inference)
-Used to summarize a long text. 📝
+Used to summarize a long text.
 
 - **Endpoint**: `POST /api/v1/summarize`
 - **Content-Type**: `application/json`
@@ -72,7 +72,7 @@ You can view all API schemas and the interactive testing interface in your brows
 ```
 http://localhost:8000/docs
 ```
-### ✅ Quality Assurance & Testing
+### Quality Assurance & Testing
 #### 1. Code Formatting
 Checks and automatically fixes code styling (using Black) and import ordering (using Isort).
 ```bash
@@ -84,7 +84,7 @@ Executes unit tests using `pytest` to verify core functionality, DI, and error h
 make test
 ```
 
-### 🛑 Stopping the Service
+### Stopping the Service
 Stops and removes all containers and the network created by Docker Compose:
 ```bash
 make clean
